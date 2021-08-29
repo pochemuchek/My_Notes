@@ -26,10 +26,9 @@ void MERGE_SORT::MergeArray(int *FirstArray, int SizeFirst, int *SecondArray, in
     int IndxNewArr = 0;
     int *NewArray = new int[SizeFirst + SizeSecond];
 
-    while (IndxArr1 <= SizeFirst && IndxArr2 <= SizeSecond){
+    while (IndxArr1 < SizeFirst && IndxArr2 < SizeSecond){
         while(FirstArray[IndxArr1] <= SecondArray[IndxArr2]){
            NewArray[IndxNewArr++] = FirstArray[IndxArr1++];
-
            if(IndxArr1 >= SizeFirst){
                break;
            }
